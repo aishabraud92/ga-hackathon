@@ -1,15 +1,16 @@
 /* CUSTOM STYLES */
-nav {
+body {
   width: 100%;
-  background-color: #555;
-  padding: 10px 0;
+  background: linear-gradient(to right,#FFF400, #4BC0C8, #C779D0, #FEAC5E,#63C016);
+  padding: 20px 0;
 }
 
 nav a {
   margin: 10px;
   text-decoration: none;
-  font-size: 18px;
-  color: #4ff;
+  font-size: 10px;
+  font-family: monospace;
+  text-decoration-color: black;
 }
 
 nav a:hover {
@@ -17,7 +18,7 @@ nav a:hover {
 }
 
 .footer {
-  background-color: #555;
+  background-color: black;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -86,18 +87,19 @@ nav a:hover {
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 75px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-image:repeating-linear-gradient(red,green,yellow,purple);
+  height: 160px;
   padding: 20px;
-  color: white;
+  color: black;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 50px;
+  font-family: monospace;
 }
 
 .App-intro {

@@ -4,6 +4,7 @@ class Home extends Component {
   render(){
     return (
         <p>Send your friends a clown!</p>
+
       );
   }
 }

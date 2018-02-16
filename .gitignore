@@ -56,6 +56,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# VS Code installs
-.vscode

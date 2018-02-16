@@ -15,12 +15,39 @@ var userSchema = new mongoose.Schema({
     minlength: 5,
     maxlength: 99
   },
+  phone: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   password: {
     type: String,
     required: true,
     minlength: 6,
     maxlength: 99
-  }
+  },
+  orders: [
+    {
+      confirmed: Boolean,
+      date: Date,
+      address: String,
+      clown: String,
+      extras: {
+        balloons: {
+          selected: Boolean,
+          price: Number
+        },
+        chocolates: {
+          selected: Boolean,
+          price: Number
+        },
+        singing: {
+          selected: Boolean,
+          price: Number
+        }
+      }
+    }
+  ]
 });
 
 // Override 'toJSON' to prevent the password from being returned with the user
@@ -28,8 +55,10 @@ userSchema.set('toJSON', {
   transform: function(doc, ret, options) {
     var returnJson = {
       id: ret._id,
+      name: ret.name,
       email: ret.email,
-      name: ret.name
+      phone: ret.phone,
+      orders: ret.orders
     };
     return returnJson;
   }
